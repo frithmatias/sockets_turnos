@@ -1,0 +1,27 @@
+<div class="bg-light d-flex justify-content-end justify-content-sm-start justify-content-md-center align-items-center" style="max-width: 100%; height: 100%">
+    
+<div class="card border-success m-5" style="max-width: 18rem; text-align: center;">
+        <div class="card-header">TURNOS</div>
+        <div class="card-body text-success" >
+          <h5 class="card-title">
+                <span *ngIf="loading" id="lblNuevoTicket">
+                        Cargando...
+                    </span>
+                    <span *ngIf="!loading" id="lblNuevoTicket">
+                     El número de su ticket es 
+                  </span>
+                  <div>
+                      <span *ngIf="!loading" id="lblNuevoTicketNumero">
+                            {{ ticketNum }}
+                         </span>
+
+                  </div>
+          </h5>
+          <p class="card-text">Obtenga su ticket y espere su turno en la pantalla.</p>
+          <button class="btn btn-secondary btn-lg" (click)="nuevoTicket()">
+                Generar nuevo ticket
+            </button>
+        </div>
+      </div>
+
+</div>
